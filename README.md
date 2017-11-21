@@ -64,10 +64,45 @@ You will receive a warning that says the "command may disrupt existing ssh conne
 
 The firewall is now active. Feel free to run the sudo ufw status verbose command to see the rules that are set.
 
+### HTTP—port 80
+
+HTTP connections, which is what unencrypted web servers use, can be allowed with this command:
+
+    sudo ufw allow http
+
+If you'd rather use the port number, 80, use this command:
+
+    sudo ufw allow 80
+    
+For port 8888, use this command:
+
+    sudo ufw allow 8888
+
+### HTTPS—port 443
+
+HTTPS connections, which is what encrypted web servers use, can be allowed with this command:
+
+    sudo ufw allow https
+
+If you'd rather use the port number, 443, use this command:
+
+    sudo ufw allow 443
+
+### FTP—port 21
+
+FTP connections, which is used for unencrypted file transfers (which you probably shouldn't use anyway), can be allowed with this command:
+
+    sudo ufw allow ftp
+
+If you'd rather use the port number, 21, use this command:
+
+    sudo ufw allow 21/tcp
+
 
 
 
 ## Resources
 - https://www.computerworld.com/article/3144985/linux/linux-hardening-a-15-step-checklist-for-a-secure-linux-server.html
 - https://mattwilcox.net/web-development/setting-up-a-secure-home-web-server-with-raspberry-pi
+- https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-14-04
 
