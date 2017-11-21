@@ -40,18 +40,21 @@ Then, restart Apache service to take effect the changes.
 
 ## Firewall
 
-`Allow SSH Connections`
+    Allow SSH Connections
+
 This will create firewall rules that will allow all connections on port 22, which is the port that the SSH daemon listens on. UFW knows what "ssh", and a bunch of other service names, means because it's listed as a service that uses port 22 in the /etc/services file.
 
 We can actually write the equivalent rule by specifying the port instead of the service name. For example, this command works the same as the one above:
-`sudo ufw allow 22`
+
+    sudo ufw allow 22
 
 If you configured your SSH daemon to use a different port, you will have to specify the appropriate port. For example, if your SSH server is listening on port 2222, you can use this command to allow connections on that port:
-`sudo ufw allow 2222`
+
+    sudo ufw allow 2222
 
 Now that your firewall is configured to allow incoming SSH connections, we can enable it.
 
-Enable UFW
+### Enable UFW
 
 To enable UFW, use this command:
 
