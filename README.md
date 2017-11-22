@@ -98,6 +98,8 @@ If you'd rather use the port number, 21, use this command:
 
     sudo ufw allow 21/tcp
 
+# OPcache
+https://lastplaceonthe.net/how-to-enable-php-7-opcache-on-ubuntu-16-04/
 
 
 
